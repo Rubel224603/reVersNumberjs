@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Reverse Number</title>
+</head>
+<body>
+	<h1>Reverse Number</h1>
+	
+	<input type="number" id="UserInp" placeholder="Enter Your Number" />
+	<input type="button" id="checkBtn" value="Check" />
+	
+	
+	<script type="text/javascript">
+	
+		document.getElementById("checkBtn").addEventListener("click",function(){
+			
+			var userNumber = document.getElementById("UserInp").value;
+			var sum=0;
+			
+			
+			var r;
+			
+			while(userNumber != 0){
+				r = userNumber%10;
+				
+				userNumber=parseInt(userNumber/10);
+				sum= (sum*10)+r;
+				
+				
+				
+			}
+			document.querySelector(".result").innerHTML="The Reverse Number = "+sum;
+		});
+	</script>
+	
+	
+	<h1  class="result"></h1>
+</body>
+</html>
